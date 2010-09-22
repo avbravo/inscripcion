@@ -1,0 +1,6 @@
+    <?xml version="1.0" encoding="utf-8"?>
+<Context>
+    <Resource name="jdbc/congreso" auth="Container" type="javax.sql.DataSource"
+        username="avbravo" password="denver16a" driverClassName="com.mysql.jdbc.Driver"
+        url="jdbc:mysql://localhost:3306/congreso?autoReconnect=true" maxActive="8" maxIdle="8" />
+</Context>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Documento sin t&iacute;tulo</title>
+        <link href="css/estilosfie.css" rel="stylesheet" type="text/css" />
+        <link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/skin/humanity/skin.css"/>
+        <script type="text/JavaScript">
+        <!--
+        function MM_swapImgRestore() { //v3.0
+          var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+        }
+
+        function MM_preloadImages() { //v3.0
+          var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+            var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+            if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+        }
+
+        function MM_findObj(n, d) { //v4.01
+          var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+            d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+          if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+          for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+          if(!x && d.getElementById) x=d.getElementById(n); return x;
+        }
+
+        function MM_swapImage() { //v3.0
+          var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+           if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+        }
+        //-->
+        </script>
+        <style type="text/css">
+            <!--
+            .Estilo1 {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 10px;
+            }
+            -->
+        </style>
+    </h:head>
+
+    <body onload="MM_preloadImages('im&aacute;genes/pageelectrica2_07.gif','im&aacute;genes/pageelectrica2_08.gif','im&aacute;genes/pageelectrica2_09.gif')">
+        <div id="Contenedor">
+            <div id="superior"><img src="imagenes/pageelectrica2_01.gif" width="1024" height="74" /></div>
+            <div id="superiorCentral"><img src="imagenes/pageelectrica2_02.gif" width="1024" height="58"/></div>
+            <div id="superiorInferior"><img src="imagenes/pageelectrica2_03.gif" width="1024" height="68" /></div>
+
+            <div id="ladoIzq">
+                <div id="cuadroIzqSup"><img src="imagenes/pageelectrica2_05.gif" width="146" height="106"/></div>
+                <div id="botonCongreso"><a href="http://congreso.ls.utp.ac.pa" target="_top" onmouseover="MM_swapImage('Congreso','','imagenes/pageelectrica2_07.gif',1)" onmouseout="MM_swapImgRestore()"><img src="imagenes/pageelectrica_07.gif" name="Congreso" width="146" height="41" border="0" id="Congreso" /></a></div>
+                <div id="botonUTP"><a href="http://www.utp.ac.pa" target="_top" onmouseover="MM_swapImage('UTP','','imagenes/pageelectrica2_08.gif',1)" onmouseout="MM_swapImgRestore()"><img src="imagenes/pageelectrica_08.gif" name="UTP" width="146" height="39" border="0" id="UTP" /></a></div>
+                <div id="botonCRUTA"><a href="http://www.ls.utp.ac.pa" target="_top" onmouseover="MM_swapImage('CRUTA','','imagenes/pageelectrica2_09.gif',1)" onmouseout="MM_swapImgRestore()"><img src="imagenes/pageelectrica_09.gif" name="CRUTA" width="146" height="41" border="0" id="CRUTA" /></a></div>
+                <div id="cuadroIzqInf"><img src="imagenes/pageelectrica_10.gif" width="146" height="373"/></div>
+            </div>
+            <div id="ladoDerecho">
+                <div id="ladoDer">
+                                    <h:form rendered="#{usuariosBeans.logeado}">
+<h:outputText value="LISTADO USUARIOS"/>
+                                        <h:panelGrid columns="1" >
+                                            <h:commandLink action="#{menu.RegresarMenuAdministrador}" title="Regresar"  >
+                                                   <h:graphicImage value="/resources/imagenes/botones/return.png" width="30" height="30"/>
+                                            </h:commandLink>
+                                        </h:panelGrid>
+                                        <p:dataTable var="usuarios" value="#{usuariosBeans.usuarioslist}" paginator="true"
+                                                     rows="10" dynamic="false or true"
+                                                     selection="#{usuariosBeans.selectedUsuarios}" selectionMode="single" >
+                                            <p:column filterBy="#{usuarios.nombre}">
+                                                <f:facet name="header">
+                                                    <h:outputText value="Nombre" />
+                                                </f:facet>
+                                                <h:outputText value="#{usuarios.nombre}" />
+                                            </p:column>
+
+                                            <p:column filterBy="#{usuarios.grupo}">
+                                                <f:facet name="header">
+                                                    <h:outputText value="Grupo" />
+                                                </f:facet>
+
+                                                <h:outputText value="#{usuarios.grupo}" />
+                                            </p:column>
+                                            <p:column filterBy="#{usuarios.username}">
+                                                <f:facet name="header">
+                                                    <h:outputText value="Username" />
+                                                </f:facet>
+
+                                                <h:outputText value="#{usuarios.username}" />
+                                            </p:column>
+
+                                           
+                                        </p:dataTable>
+                                        <p:messages id="messages"/>
+                                        <!--
+                                        <p:growl id="growl" showDetail="true" life="3000" />
+                                        -->
+                                    </h:form>
+                                    <h:form rendered="#{!usuariosBeans.logeado}">
+                                        <h:outputText value="Acceso no autorizado"/>
+                                        <h:commandLink action="#{menu.AdministradorLogin}" title="Regresar"  >
+                                            <h:graphicImage value="/resources/imagenes/botones/return.png" width="30" height="30"/>
+                                        </h:commandLink>
+                                    </h:form>
+                               </div>
+                <div class="Estilo1" id="PiedePag">
+                    <div align="right">Derechos Reservados - UTP / A.C-A.V / USSI </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
