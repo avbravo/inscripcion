@@ -1,0 +1,93 @@
+#Contenedor {
+	margin: 0px;
+	padding: 0px;
+	width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#superior {
+	margin: 0px;
+	width: 1024px;
+	padding: 0px;
+	height: 74px;
+}
+#superiorCentral {
+	margin: 0px;
+	width: 1024px;
+	padding: 0px;
+	height: 58px;
+}
+
+
+#ladoIzq {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 146px;
+	height: auto;
+}
+#cuadroIzqSup {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 146px;
+	height: 106px;
+}
+#superiorInferior {
+	margin: 0px;
+	height: 68px;
+	width: 1024px;
+	padding: 0px;
+}
+
+#botonCongreso {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 146px;
+	height: 41px;
+}
+#botonUTP {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 146px;
+	height: 39px;
+}
+#botonCRUTA {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 146px;
+	height: 41px;
+}
+#cuadroIzqInf {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 146px;
+	height: 373px;
+	
+}
+#ladoDer {
+    margin: 0px;
+	padding: 0px;
+	width: 878px;
+	float: right;
+}
+
+
+
+#PiedePag {
+    margin: 0px;
+	padding: 0px;
+	clear: both;
+	background-color: #EAEAEA;
+}
+
+#lineaDer {
+    margin: 0px;
+	padding: 0px;
+	float: right;
+	width: 1px;
+}
