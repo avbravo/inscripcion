@@ -38,6 +38,9 @@ public class PrioridadesBeans implements Serializable {
     private int maximo_reserva;
     private int idfacultad;
 
+    /*
+     * prepararVista
+     */
     public String prepararVista() {
         try {
             prioridades.setIdfacultad(selectedPrioridades.getIdfacultad());
@@ -218,7 +221,7 @@ public class PrioridadesBeans implements Serializable {
             prioridadesCombo = new SelectItem[maximo_prioridad + 1];
             for (int i = 0; i <= maximo_prioridad; i++) {
                 prioridadesCombo[i] = new SelectItem(String.valueOf(i), String.valueOf(i));
-            }
+            }               
 
 
             return "null";

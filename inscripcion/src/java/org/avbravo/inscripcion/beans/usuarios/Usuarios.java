@@ -25,6 +25,16 @@ private String password;
 private String activo;
 private int    idfacultad;
 
+private boolean logeado;
+
+    public boolean isLogeado() {
+        return logeado;
+    }
+
+    public void setLogeado(boolean logeado) {
+        this.logeado = logeado;
+    }
+
     /** Creates a new instance of Usuarios */
     public Usuarios() {
     }
