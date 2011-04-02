@@ -2,7 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package org.avbravo.inscripcion.beans.prioridades;
 
 import java.io.Serializable;
@@ -18,9 +17,9 @@ import javax.faces.bean.SessionScoped;
 public class Prioridades implements Serializable {
 
     private static final long serialVersionUID = 1L;
-private int maximo_prioridad;
-private int maximo_reserva;
-private int idfacultad;
+    private int maximo_prioridad;
+    private int maximo_reserva;
+    private int idfacultad;
 
     /** Creates a new instance of Prioridades */
     public Prioridades() {
@@ -31,7 +30,6 @@ private int idfacultad;
         this.maximo_reserva = maximo_reserva;
         this.idfacultad = idfacultad;
     }
-
 
     public int getIdfacultad() {
         return idfacultad;
@@ -56,6 +54,4 @@ private int idfacultad;
     public void setMaximo_reserva(int maximo_reserva) {
         this.maximo_reserva = maximo_reserva;
     }
-    
-
 }
